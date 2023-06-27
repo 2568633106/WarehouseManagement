@@ -11,12 +11,6 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.List;
 
-/**
- * @description:	实现类，对进行相关的业务逻辑
- * @author: Fish_Vast
- * @Date: 2021/8/25
- * @version: 1.0
- */
 @Service
 public class GoodsService {
     @Autowired

@@ -13,12 +13,12 @@ import java.util.List;
 public class UserController {
     @Autowired
     private GoodsService goodService;
-    //通过id得到用户信息
+
     @RequestMapping(value = "/getUser/{id}", method = RequestMethod.GET)
     public Goods getUser(@PathVariable int id){
         return goodService.getGoods(id);
     }
-    //通过id删除用户信息
+
     @RequestMapping(value = "/delete", method = RequestMethod.GET)
     public String delete(int id){
         int result = goodService.delete(id);
@@ -43,7 +43,7 @@ public class UserController {
     public int insert(@RequestBody Goods good){
         return goodService.save(good);
     }
-    //查询所有用户的信息
+
     @GetMapping("/selectAll")
     @ResponseBody
     public List<Goods> listGood(@RequestBody GetAllReq getAllReq){
